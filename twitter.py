@@ -48,14 +48,14 @@ class twitter():
 
     def useTwitter(self, auth):
         api = tweepy.API(auth)
-        api.update_status(status = self.tweetString)
+        api.update_status(status = '{}'.format(self.tweetString))
 
 
     def loginTwitter(self):
         auth = tweepy.OAuthHandler(self.consumerKey, self.consumerSecret)
         auth.set_access_token(self.acessToken, self.acessSecret)
-        self.useTwitter(auth)
         self.tweetMaker()
+        self.useTwitter(auth)
 
 
 twettar = twitter()
