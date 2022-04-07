@@ -1,16 +1,13 @@
 import tweepy
 from src.calendario import Formatacao
-from dotenv import load_dotenv
 import os
-
-load_dotenv()
 
 class twitter():
     def __init__(self):
-        self.consumerKey = os.getenv('consumerKey')
-        self.consumerSecret = os.getenv('consumerSecret')
-        self.acessToken = os.getenv('acessToken')
-        self.acessSecret = os.getenv('acessSecret')
+        self.consumerKey = os.environ['consumerKey']
+        self.consumerSecret = os.environ['consumerSecret']
+        self.acessToken = os.environ['acessToken']
+        self.acessSecret = os.environ['acessSecret']
         self.tweetString = ""
 
 
