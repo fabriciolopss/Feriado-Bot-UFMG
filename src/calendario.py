@@ -34,7 +34,10 @@ class Formatacao():
             mesFeriado = int(x[3:5])
             mesAtual = int(self.diaMes[3:5])
             if(mesFeriado == mesAtual):
-                distancia = abs(diaAtual - diaFeriado)
+                if (diaAtual > diaFeriado):
+                    distancia = 0
+                else:
+                    distancia = abs(diaAtual - diaFeriado)
             elif(mesAtual < mesFeriado):
                 if(diaAtual > diaFeriado):
                     for x in range(mesAtual, mesFeriado):
